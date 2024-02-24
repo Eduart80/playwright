@@ -1,0 +1,33 @@
+
+// CheckBox
+
+// it will select the first locator if multiple locators
+await page.locator('locator').check()
+
+
+// assertion
+await expect(await page.locator('locator')).toBeChecked()
+
+await expect(await page.locator('locator')).isChecked().toBeTruethy()
+
+await expect(await page.locator('locator')).isChecked().toBeFalsy()
+
+// multiple checkbox
+
+const checkArray = [
+    "locator//1",
+     "locator//2",
+      "locator//3"
+]
+for (const checkBox of checkArray){
+    await page.locator('checkbox').check()
+}
+
+// to ucheck box
+for (const checkBox of checkArray){
+
+    if(await page.locator('checkBox').isChecked()){
+
+        await page.locator('checkbox').uncheck()
+    }
+}
