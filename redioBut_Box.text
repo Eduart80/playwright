@@ -1,0 +1,15 @@
+
+// radio button 
+await page.locator('locator').check()
+or
+await page.check('locator')
+
+// assertion
+await expect(await page.locator('locator')).toBeChecked()
+await expect(await page.locator('locator')).toBeChecked().toBeTruthy() //positive
+
+await expect(await page.locator('locator')).toBeChecked().toBeFalsy() //negative
+
+
+// wait time
+await page.waitForTimeout(5000)

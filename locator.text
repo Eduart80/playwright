@@ -1,0 +1,18 @@
+
+Link/Button
+
+await page.locator('locator').click()
+await page.click('locator')
+
+inputBox
+
+await page.locator('locator').fill('text')
+await page.locator('locator').type('text')
+
+await page.fill('locator', 'text')
+await page.type('locator', 'text')
+
+Multiple locators web elements
+
+const el = await page.$$('locator')
+

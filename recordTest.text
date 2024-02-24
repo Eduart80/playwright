@@ -1,0 +1,19 @@
+
+Start on terminal 
+npx playwright codegen
+
+helper
+npx playwright codegen --help
+
+Auto record and save to new file test
+
+npx playwright codegen --output tests/fileName.spec.js
+npx playwright codegen --o tests/fileName.spec.js
+
+Pick locator in the window help to find element
+click on it, and mouse over and click
+
+simulate on IOS
+
+npx playwright codegen --device "iPhone 13"
+see other options by entering just the name like "iPhone"
